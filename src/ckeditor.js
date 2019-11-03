@@ -11,6 +11,8 @@ import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapte
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Strike from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
@@ -20,7 +22,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+// import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -28,6 +30,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 
 import MathType from '@wiris/mathtype-ckeditor5/src/plugin';
 
@@ -40,6 +44,9 @@ ClassicEditor.builtinPlugins = [
 	Autoformat,
 	Bold,
 	Italic,
+	Underline,
+	Strike,
+	Highlight,
 	BlockQuote,
 	CKFinder,
 	EasyImage,
@@ -49,7 +56,7 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	Indent,
+	// Indent,
 	Link,
 	List,
 	MediaEmbed,
@@ -57,31 +64,39 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
+	HorizontalLine,
 
 	MathType,
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	// extraPlugins: 'fixed',
+	viewportTopOffset: 50,
 	toolbar: {
 		items: [
 			'heading',
 			'|',
-			'bold',
 			'italic',
-			'link',
-			'bulletedList',
+			'bold',
+			'underline',
+			'strikethrough',
+			'|',
+			'highlight',
+			'|',
 			'numberedList',
+			'bulletedList',
+			// '|',
+			// 'indent',
+			// 'outdent',
 			'|',
-			'indent',
-			'outdent',
-			'|',
-			'imageUpload',
 			'blockQuote',
 			'insertTable',
+			'horizontalLine',
+			'|',
+			'link',
+			'imageUpload',
 			'mediaEmbed',
-			'undo',
-			'redo',
 			'|',
 			'MathType',
 			'ChemType',
