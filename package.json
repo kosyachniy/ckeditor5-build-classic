@@ -1,24 +1,12 @@
 {
-  "name": "@ckeditor/ckeditor5-build-classic",
-  "version": "15.0.0",
-  "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
+  "name": "@kosyachniy/ckeditor",
+  "version": "1.0.0",
+  "description": "CKEditor 5 + math",
   "keywords": [
-    "ckeditor5-build",
     "ckeditor",
-    "ckeditor5",
-    "ckeditor 5",
     "wysiwyg",
-    "rich text",
-    "editor",
-    "html",
-    "contentEditable",
-    "editing",
-    "operational transformation",
-    "ot",
-    "collaboration",
-    "collaborative",
-    "real-time",
-    "framework"
+    "math",
+    "editor"
   ],
   "main": "./build/ckeditor.js",
   "files": [
@@ -68,7 +56,7 @@
   "bugs": "https://github.com/ckeditor/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-build-classic.git"
+    "url": "https://github.com/kosyachniy/ckeditor5-build-classic.git"
   },
   "scripts": {
     "build": "webpack --mode production",
